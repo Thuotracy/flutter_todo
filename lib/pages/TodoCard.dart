@@ -51,8 +51,8 @@ class _TodoCardState extends State<TodoCard> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5),
                 ),
-                activeColor: const Color(0xff6cf8a9),
-                checkColor: const Color(0xff0e3e26),
+                activeColor: const Color(0xffffeb00),
+                checkColor: const Color(0xfd000000),
                 value: isChecked,
                 onChanged: (bool? value) {
                   setState(() {

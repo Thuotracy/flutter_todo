@@ -71,7 +71,7 @@ class _ViewDataState extends State<ViewData> {
                     },
                     icon: Icon(
                       Icons.edit,
-                      color: edit ? Colors.red : Colors.white,
+                      color: edit ? Colors.yellow : Colors.white,
                       size: 28,
                     ),
                   ),
@@ -97,7 +97,7 @@ class _ViewDataState extends State<ViewData> {
                       "Your Task",
                       style: TextStyle(
                         fontSize: 33,
-                        color: Colors.white,
+                        color: Colors.yellow,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 4,
                       ),
@@ -167,20 +167,14 @@ class _ViewDataState extends State<ViewData> {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          gradient: const LinearGradient(
-            colors: [
-              Color(0xfffd746c),
-              Color(0xffff9068),
-              Color(0xfffd746c),
-            ],
-          ),
+          color: Colors.yellow
         ),
         child: const Center(
           child: Text(
             "Save Changes",
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
+              color: Colors.black,
+              fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
           ),

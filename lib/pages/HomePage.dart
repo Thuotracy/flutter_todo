@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
-          "Today's Task",
+          "Your Tasks",
           style: TextStyle(
             fontSize: 34,
             fontWeight: FontWeight.bold,

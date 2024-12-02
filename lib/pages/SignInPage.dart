@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:todolist/pages/SignUpPage.dart';
 
 import '../Service/Auth_Service.dart';
 import 'HomePage.dart';
@@ -54,19 +55,27 @@ class _SignInPageState extends State<SignInPage> {
                         fontSize: 20,
                       )
                   ),
-                  Text("Sign Up",
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (builder) => SignUpPage()),
+                              (route) => false);
+                    },
+                    child: Text("Sign Up",
                       style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      )
-                  )
+                        color: Colors.yellow,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 30),
               Text("Forgot Password",
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.yellow,
                       fontSize: 20,
                       fontWeight: FontWeight.bold
                   )
@@ -114,18 +123,14 @@ class _SignInPageState extends State<SignInPage> {
         height: 60,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(colors: [
-              Color(0xfffd746c),
-              Color(0xffff9068),
-              Color(0xfffd746c)
-            ])
+            color: Colors.yellow
         ),
         child: Center(
           child: circular
             ? CircularProgressIndicator():
             Text("Sign In",
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 20,
             ),
           ),

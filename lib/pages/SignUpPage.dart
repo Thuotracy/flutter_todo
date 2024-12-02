@@ -63,7 +63,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     },
                     child: Text("Login",
                       style: TextStyle(
-                        color: Colors.blue,
+                        color: Colors.yellow,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
@@ -119,18 +119,14 @@ class _SignUpPageState extends State<SignUpPage> {
         height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(colors: [
-            Color(0xfffd746c),
-            Color(0xffff9068),
-            Color(0xfffd746c)
-          ])
+          color: Colors.yellow
         ),
         child: Center(
           child: circular
           ? CircularProgressIndicator():
           Text("Sign Up",
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 20,
           ),
           ),
