@@ -117,13 +117,7 @@ class _AddTodoPageState extends State<AddTodoPage> {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          gradient: LinearGradient(
-            colors: [
-              Color(0xfffd746c),
-              Color(0xffff9068),
-              Color(0xfffd746c),
-            ],
-          ),
+          color: Colors.yellow
         ),
         child: Center(
           child: Text(

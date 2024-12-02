@@ -24,13 +24,26 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        actions: [IconButton(icon: Icon(Icons.logout),
+          iconSize: 30, // Set the size of the icon
+          color: Colors.yellow, // Set the color of the icon
+          onPressed: () async {
+          await authClass.logout();
+          Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (builder) => SignUpPage()),
+              (route) => false);
+        },)],
         backgroundColor: Colors.black,
-        title: const Text(
-          "Your Tasks",
-          style: TextStyle(
-            fontSize: 34,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 20), // Add top padding here
+          child: Text(
+            "Your Tasks",
+            style: TextStyle(
+              fontSize: 34,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
         ),
         bottom: const PreferredSize(
@@ -44,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.yellow,
                 ),
               ),
             ),
@@ -113,7 +126,7 @@ class _HomePageState extends State<HomePage> {
             MaterialPageRoute(builder: (context) => AddTodoPage()),
           );
         },
-        backgroundColor: const Color(0xfffd746c),
+        backgroundColor: const Color(0xffffeb00),
         child: const Icon(Icons.add, size: 32),
       ),
     );
